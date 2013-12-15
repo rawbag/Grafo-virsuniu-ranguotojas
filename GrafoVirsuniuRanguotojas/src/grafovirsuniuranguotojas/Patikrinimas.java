@@ -9,7 +9,7 @@ package grafovirsuniuranguotojas;
  * @author Rimvydas
  */
 public class Patikrinimas {
-    private int[][] m = Generavimas.gautiMatrica(); // is pofkes
+    private int[][] m = null; // is pofkes
     
     boolean tikrintiMatmenis()
     {

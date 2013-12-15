@@ -1,5 +1,10 @@
 package grafovirsuniuranguotojas;
 
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 /**
  * Pagrindinė klasė
  * @date 2013-10-08
@@ -7,13 +12,18 @@ package grafovirsuniuranguotojas;
  */
 public class GrafoVirsuniuRanguotojas 
 {
-    public static void main(String[] args) 
+    public static void main(String[] args) throws IOException 
     {
         System.out.println("Labass!");
-        System.out.println("Labas pasauli, tave sveikina Povilas!");
-        System.out.println("Gavau pofkes commitą, sveikinas Paulius");
-        System.out.println("zdarov, gavau Pauliaus, Rimvydas!");
-        System.out.println("Gooood....");
-        System.out.println("Veikia ir man.");
+        Generavimas g = new Generavimas();
+        g.generuotiMatrica(0.6,0.2,0.2,3,2,1);
+        //g.skaitytiMatricaIsEkrano();
+        int[][] matrica = g.gautiMatrica();
+                for (int s = 0; s < matrica.length; s++) {
+            for (int ss = 0; ss < matrica.length; ss++) {
+                System.out.print(matrica[s][ss] + " ");
+            }
+            System.out.println("");
+        }
     }
 }
